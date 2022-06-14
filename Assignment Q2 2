@@ -1,0 +1,30 @@
+# Assignment Q2
+# Python program to check whether second string
+# can be formed from first string
+def canMakeStr2(string1, string2):
+
+	# Create a count array and count
+	# frequencies characters in s1
+	count = {string1[i] : 0 for i in range(len(string1))}
+	
+	for i in range(len(s1)):
+		count[string1[i]] += 1
+	
+	# Now traverse through str2 to check
+	# if every character has enough counts
+	for i in range(len(string2)):
+		if (count.get(string2[i]) == None or count[string2[i]] == 0):
+			return False
+		count[string2[i]] -= 1
+	return True
+
+# Driver Code
+string1 = input("Please input the first letter")
+String1 = string1.lower()
+string2 = input("Please inpur the second letter")
+String2 = string2.lower
+
+if canMakeStr2(string1, string2):
+	print("True")
+else:
+	print("False")
