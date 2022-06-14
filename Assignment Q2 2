@@ -22,7 +22,7 @@ def canMakeStr2(string1, string2):
 string1 = input("Please input the first letter")
 String1 = string1.lower()
 string2 = input("Please inpur the second letter")
-String2 = string2.lower
+String2 = string2.lower()
 
 if canMakeStr2(string1, string2):
 	print("True")
